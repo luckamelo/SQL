@@ -1,0 +1,14 @@
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    estado VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    idade INT NOT NULL
+);
+
+INSERT INTO usuarios (nome, estado, email, idade) 
+VALUES ('Rogerio', 'Alagoas', 'rogerio@email.com', 41);
+
+SELECT * FROM usuarios WHERE estado = 'Alagoas' AND nome = 'Carla';
+
+SELECT * FROM usuarios WHERE idade BETWEEN 20 AND 30;
